@@ -1,5 +1,7 @@
+import React from "react";
 import Head from "next/head";
-import { FormEvent, useState } from "react";
+import type { FormEvent } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [formData, setFormData] = useState({});

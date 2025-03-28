@@ -2,12 +2,19 @@
   "name": "spotsmap",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "lint:styles": "stylelint '**/*.{css,scss,tsx}' '**/*.styled.ts' --fix",
+    "type-check": "tsc --noEmit"
   },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "node 22"
+  ],
   "dependencies": {
     "@types/node": "22.13.14",
     "@types/react": "19.0.12",
@@ -17,15 +24,28 @@
     "eslint-config-next": "15.2.4",
     "googleapis": "^148.0.0",
     "next": "15.2.4",
-    "postcss": "^8.4.21",
+    "postcss": "^8.5.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "typescript": "5.8.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
+    "cssnano": "^7.0.6",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^16.0.0",
+    "postcss-preset-env": "10.1.5",
+    "postcss-scss": "^4.0.9",
+    "postcss-styled-syntax": "^0.7.1",
+    "postcss-syntax": "^0.36.2",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.17.0",
+    "stylelint-config-standard": "^37.0.0",
     "typescript-eslint": "^8.28.0"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
